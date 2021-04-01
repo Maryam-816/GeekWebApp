@@ -92,10 +92,10 @@
     <Content Include="Content\css\jasny-bootstrap.min.css" />
     <Content Include="Content\css\main.css" />
     <Content Include="Content\css\responsive.css" />
-    <Content Include="Content\imgs\backgrounds\banner.jpg" />
-    <Content Include="Content\imgs\backgrounds\bg.jpg" />
-    <Content Include="Content\imgs\backgrounds\imgfooter.jpg" />
-    <Content Include="Content\imgs\backgrounds\skill-bg.jpg" />
+    <Content Include="Content\imgs\backgrounds\img1.jpg" />
+    <Content Include="Content\imgs\backgrounds\img2.jpg" />
+    <Content Include="Content\imgs\backgrounds\img3.jpg" />
+    <Content Include="Content\imgs\backgrounds\img4.jpg" />
     <Content Include="Content\imgs\blog\img1.jpg" />
     <Content Include="Content\imgs\blog\img2.jpg" />
     <Content Include="Content\imgs\blog\img3.jpg" />
