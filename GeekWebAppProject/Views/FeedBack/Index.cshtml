@@ -1,0 +1,81 @@
+﻿@model GeekWebAppProject.Models.Feedback
+    @{ 
+        var carousel = Model;
+    }
+
+
+<!-- Testimonial Section Start -->
+
+<div class="row">
+    <h1 class="section-title wow fadeInLeft animated" data-wow-delay=".6s">What My<br>Client <br><span>Says</span></h1>
+    <div id="testimonial-carousel" class="carousel slide wow fadeInUp animated" data-ride="carousel" data-wow-delay="1.2s">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#testimonial-carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#testimonial-carousel" data-slide-to="1"></li>
+            <li data-target="#testimonial-carousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="item active">
+                <blockquote>
+                    <div class="commant">
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                            <div class="claint">
+                                <img src="/Content/imgs/testimonial/@carousel.ImagePath" alt="">
+                            </div>
+                            <span class="quote"><i class="fa fa-quote-left"></i></span>
+                        </div>
+                        <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+                            <div class="info">
+                                <p>@carousel.Text</p>
+                                <h4>@carousel.ClientFullName</h4>
+                                <h5>@carousel.ClientJob</h5>
+                            </div>
+                        </div>
+                    </div>
+                </blockquote>
+            </div>
+
+            <div class="item">
+                <blockquote>
+                    <div class="commant">
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                            <div class="claint">
+                                <img src="/Content/imgs/testimonial/@carousel.ImagePath" alt="">
+                            </div>
+                            <span class="quote"><i class="fa fa-quote-left"></i></span>
+                        </div>
+                        <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+                            <div class="info">
+                                <p>@carousel.Text</p>
+                                <h4>@carousel.ClientFullName</h4>
+                                <h5>@carousel.ClientJob</h5>
+                            </div>
+                        </div>
+                    </div>
+                </blockquote>
+            </div>
+            <div class="item">
+                <blockquote>
+                    <div class="commant">
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                            <div class="claint">
+                                <img src="/Content/imgs/testimonial/@carousel.ImagePath" alt="">
+                            </div>
+                            <span class="quote"><i class="fa fa-quote-left"></i></span>
+                        </div>
+                        <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+                            <div class="info">
+                                <p>@carousel.Text</p>
+                                <h4>@carousel.ClientFullName</h4>
+                                <h5>@carousel.ClientJob</h5>
+                            </div>
+                        </div>
+                    </div>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Testimonial Section End -->
+<!--Portfolio-->

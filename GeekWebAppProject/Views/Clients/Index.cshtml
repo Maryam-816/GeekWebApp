@@ -1,0 +1,32 @@
+﻿@model GeekWebAppProject.Models.ValuableClients
+    @{ 
+        var clients = Model;
+    }
+
+<div class="row">
+    <h1 class="section-title wow fadeInLeft animated" data-wow-delay=".6s">My Valuable <br><span>Clients</span></h1>
+    <div id="clients-carousel" class="owl-carousel owl-theme">
+        <div class="item wow fadeInLeft animated" data-wow-delay=".9s">
+            <a href="#"><img src="/Content/imgs/clients/@clients.ImagePath" alt=""></a>
+        </div>
+        <div class="item wow fadeInLeft animated" data-wow-delay=".9s">
+            <a href="#"><img src="/Content/imgs/clients/@clients.ImagePath" alt=""></a>
+        </div>
+        <div class="item wow fadeInRight animated" data-wow-delay=".9s">
+            <a href="#"><img src="/Content/imgs/clients/@clients.ImagePath" alt=""></a>
+        </div>
+        <div class="item wow fadeInRight animated" data-wow-delay=".9s">
+            <a href="#"><img src="/Content/imgs/clients/@clients.ImagePath" alt=""></a>
+        </div>
+        <div class="item wow fadeIn animated">
+            <a href="#"><img src="/Content/imgs/clients/@clients.ImagePath" alt=""></a>
+        </div>
+        <div class="item wow fadeIn animated">
+            <a href="#"><img src="/Content/imgs/clients/@clients.ImagePath" alt=""></a>
+        </div>
+        <div class="item wow fadeIn animated">
+            <a href="#"><img src="/Content/imgs/clients/@clients.ImagePath" alt=""></a>
+        </div>
+    </div>
+</div>
+
