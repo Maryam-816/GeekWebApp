@@ -1,13 +1,12 @@
-﻿@model GeekWebAppProject.Models.Menu 
-@{ 
-    var menu = Model;
-}
-        
+﻿@model GeekWebAppProject.Data.Menu
+    @{ 
+        var menu = Model;
+    }
 
 <div class="col-md-12 top-header">
     <div class="logo-menu">
         <div class="logo pull-left wow fadeInDown animated" data-wow-delay=".2s">
-            <a href="index.html"><img src="/Content/imgs/@menu.LogoImagePath" alt="logo"></a>
+            <a href="index.html"><img src="~/Content/imgs/logo.png" alt="logo"></a>
         </div>
         <div class="pull-right wow fadeInDown animated" data-wow-delay=".2">
             <div id="menu" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body">
@@ -16,25 +15,23 @@
         </div>
     </div>
     <div class="sidebar-nav">
-        <!-- navigation start -->
         <div class="navmenu navmenu-default navmenu-fixed-right offcanvas" style="" id="navigation">
-            <a href="index.html"><img class="logo" src="/Content/imgs/@menu.LogoImagePath" alt="logo"></a>
+            <a href="index.html"><img class="logo" src="~/Content/imgs/logo.png" alt="logo"></a>
             <ul class="nav navmenu-nav">
-                <li class="active"><a href="#header">@menu.NavName</a></li>
-                <li><a href="#works">@menu.NavName</a></li>
-                <li><a href="#clients">@menu.NavName</a></li>
-                <li><a href="#blog">@menu.NavName</a></li>
-                <li><a href="#feedback">@menu.NavName</a></li>
+                <li class="active"><a href="#header">Home</a></li>
+                <li><a href="#works">Portfolio</a></li>
+                <li><a href="#clients">Clients</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#feedback">Hire/Contact Me</a></li>
             </ul>
         </div>
-        <!-- navigation End -->
     </div>
 </div>
 <div class="row">
     <div class="col-md-12">
         <div class="banner text-center">
-            <h1 class="wow fadeInDown animated" data-wow-delay=".8s">@menu.Name</h1>
-            <h2 class="wow fadeInDown animated" data-wow-delay=".6s">@menu.Text</h2>
+            <h1 class="wow fadeInDown animated" data-wow-delay=".8s">FRANKENSTEIN SHUVO MUSA</h1>
+            <h2 class="wow fadeInDown animated" data-wow-delay=".6s">Passionate Web developer, WordPressian & GEEK ;)</h2>
             <a href="#" class="btn btn-border lg wow fadeInLeft animated" data-wow-delay="1.0s">Hire Me</a>
             <a href="#" class="btn btn-common lg wow fadeInRight animated" data-wow-delay="1.0s">Learn More</a>
             <div class="scroll">
@@ -43,4 +40,3 @@
         </div>
     </div>
 </div>
-<!--Menu-->
