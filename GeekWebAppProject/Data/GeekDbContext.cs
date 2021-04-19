@@ -20,5 +20,6 @@ namespace GeekWebAppProject.Data
         public DbSet<SkillsModel> SkillsModels { get; set; }
         public DbSet<ValuableClients> ValuableClients { get; set; }
         public DbSet<WorkModel> WorkModels { get; set; }
+        public DbSet<ContactsModel> ContactsModels { get; set; }
     }
 }
