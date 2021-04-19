@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GeekWebAppProject.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,7 +9,17 @@ namespace GeekWebAppProject.Controllers
 {
     public class MenuController : Controller
     {
-        // GET: Menu
+        //private readonly GeekDbContext _geekDbContext;
+
+        //public MenuController()
+        //{
+        //    _geekDbContext = new GeekDbContext();
+        //}
+        //public ActionResult Index()
+        //{
+        //    var menus = _geekDbContext.Menus;
+        //    return View(menus);
+        //}
         public ActionResult Index()
         {
             return View();
