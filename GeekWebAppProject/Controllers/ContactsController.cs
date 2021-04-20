@@ -32,10 +32,6 @@ namespace GeekWebAppProject.Controllers
                     ModelState.AddModelError("", "This user does not exist");
                     return View();
                 }
-                else
-                {
-                    
-                }
 
             }
             return View();
