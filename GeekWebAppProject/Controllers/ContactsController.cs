@@ -24,6 +24,20 @@ namespace GeekWebAppProject.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Index(ContactsModel contact)
         {
+            if (ModelState.IsValid)
+            {
+                User user = _geekDbContext.Users.GetUser(contact);
+                if (user == null)
+                {
+                    ModelState.AddModelError("", "This user does not exist");
+                    return View();
+                }
+                else
+                {
+                    
+                }
+
+            }
             return View();
         }
     }

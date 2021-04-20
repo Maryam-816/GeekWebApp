@@ -189,6 +189,10 @@
     <Compile Include="Migrations\202104190955145_ContactsModelsAddedToGeekDbContext.designer.cs">
       <DependentUpon>202104190955145_ContactsModelsAddedToGeekDbContext.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104200852202_UsersAdded_ContactsControllerUpdated.cs" />
+    <Compile Include="Migrations\202104200852202_UsersAdded_ContactsControllerUpdated.designer.cs">
+      <DependentUpon>202104200852202_UsersAdded_ContactsControllerUpdated.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -229,6 +233,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104190955145_ContactsModelsAddedToGeekDbContext.resx">
       <DependentUpon>202104190955145_ContactsModelsAddedToGeekDbContext.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104200852202_UsersAdded_ContactsControllerUpdated.resx">
+      <DependentUpon>202104200852202_UsersAdded_ContactsControllerUpdated.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
