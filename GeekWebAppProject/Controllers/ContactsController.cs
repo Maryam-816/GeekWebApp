@@ -22,17 +22,30 @@ namespace GeekWebAppProject.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Index(ContactsModel contact)
+        public ActionResult Index(ContactMessage contactMessage)
         {
             if (ModelState.IsValid)
             {
-                User user = _geekDbContext.Users.GetUser(contact);
-                if (user == null)
+                ContactMessage contMess = _geekDbContext.ContactMessages.GetContactMessage(contactMessage);
+                if (contMess == null)
                 {
                     ModelState.AddModelError("", "This user does not exist");
+                    ContactMessage conMess = new ContactMessage
+                    {
+                        Id = contactMessage.Id,
+                        Email = contactMessage.Email,
+                        Name = contactMessage.Name,
+                        Subject = contactMessage.Subject,
+                        Text = contactMessage.Text
+
+                    };
+                    _geekDbContext.ContactMessages.Add(conMess);
                     return View();
                 }
-
+                else
+                {
+                    Session.Add("message", contMess);
+                }
             }
             return View();
         }
