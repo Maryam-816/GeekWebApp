@@ -8,16 +8,16 @@ namespace GeekWebAppProject.Data
 {
     public static class DbSetExtension
     {
-        public static User GetUser(this DbSet<User> _users, ContactsModel contactsModel)
+        public static ContactMessage GetContactMessage(this DbSet<ContactMessage> _contactMessages, ContactMessage contactMessage)
         {
-            if (!_users.Any(q => q.Email == contactsModel.Email))
+            if (!_contactMessages.Any(q => q.Text == contactMessage.Text))
             {
                 return null;
             }
 
             else
             {
-                return (User)_users.Where(q => q.Email == contactsModel.Email);
+                return (ContactMessage)_contactMessages.Where(q => q.Text == contactMessage.Text);
             }
         }
     }
