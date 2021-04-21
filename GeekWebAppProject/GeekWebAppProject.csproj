@@ -167,7 +167,7 @@
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\PortfolioController.cs" />
     <Compile Include="Controllers\SkillsController.cs" />
-    <Compile Include="Data\ContactsModel.cs" />
+    <Compile Include="Data\ContactMessage.cs" />
     <Compile Include="Data\DbSetExtension.cs" />
     <Compile Include="Data\GeekDbContext.cs" />
     <Compile Include="Data\User.cs" />
@@ -192,6 +192,10 @@
     <Compile Include="Migrations\202104200852202_UsersAdded_ContactsControllerUpdated.cs" />
     <Compile Include="Migrations\202104200852202_UsersAdded_ContactsControllerUpdated.designer.cs">
       <DependentUpon>202104200852202_UsersAdded_ContactsControllerUpdated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104200955371_ContactsModelsRenamedToContactMessages.cs" />
+    <Compile Include="Migrations\202104200955371_ContactsModelsRenamedToContactMessages.designer.cs">
+      <DependentUpon>202104200955371_ContactsModelsRenamedToContactMessages.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -236,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104200852202_UsersAdded_ContactsControllerUpdated.resx">
       <DependentUpon>202104200852202_UsersAdded_ContactsControllerUpdated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104200955371_ContactsModelsRenamedToContactMessages.resx">
+      <DependentUpon>202104200955371_ContactsModelsRenamedToContactMessages.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
