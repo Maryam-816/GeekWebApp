@@ -29,10 +29,8 @@ namespace GeekWebAppProject.Controllers
                 ContactMessage contMess = _geekDbContext.ContactMessages.GetContactMessage(contactMessage);
                 if (contMess == null)
                 {
-                    ModelState.AddModelError("", "This user does not exist");
                     ContactMessage conMess = new ContactMessage
                     {
-                        Id = contactMessage.Id,
                         Email = contactMessage.Email,
                         Name = contactMessage.Name,
                         Subject = contactMessage.Subject,
@@ -40,11 +38,8 @@ namespace GeekWebAppProject.Controllers
 
                     };
                     _geekDbContext.ContactMessages.Add(conMess);
+                    _geekDbContext.SaveChanges();
                     return View();
-                }
-                else
-                {
-                    Session.Add("message", contMess);
                 }
             }
             return View();
