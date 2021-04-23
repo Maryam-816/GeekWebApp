@@ -16,10 +16,10 @@ namespace GeekWebAppProject.Data
         [EmailAddress(ErrorMessage = "Your Email isn't valid")]
         public string Email { get; set; }
         [Required]
-        [StringLength(maximumLength: 10, MinimumLength = 2)]
+        [StringLength(maximumLength: 20, MinimumLength = 2)]
         public string Subject { get; set; }
         [Required(ErrorMessage = "Message isn't given")]
-        [StringLength(maximumLength: 1000, MinimumLength = 1)]
+        [StringLength(maximumLength: 1000, MinimumLength = 2)]
         public string Text { get; set; }
     }
 }
