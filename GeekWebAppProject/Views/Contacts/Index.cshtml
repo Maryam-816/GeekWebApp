@@ -1,26 +1,31 @@
-﻿<div class="row">
-    <h1 class="section-title wow fadeInLeft animated" data-wow-delay=".6s"><span>Hire</span><br>or Contact <br> Me</h1>
-    <div class="col-sm-6 col-md-6 wow fadeInLeft animated" data-wow-delay="1.4s">
-        <form action="" name="contact">
-            <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                <input type="text" name="name" class="form-control" placeholder="Your name">
-            </div>
-            <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-envelope-o"></i></span>
-                <input type="email" name="email" class="form-control" placeholder="Email">
-            </div>
-            <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-fire"></i></span>
-                <input type="text" name="subject" class="form-control" placeholder="Subject">
-            </div>
-            <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-comments"></i></span>
-                <textarea name="message" class="form-control large" placeholder="Massage"></textarea>
-            </div>
-            <button type="submit" class="btn btn-green"><i class="fa fa-envelope-o"></i>Send</button>
-        </form>
-    </div>
+﻿@model GeekWebAppProject.Data.ContactMessage
+
+@using (Html.BeginForm("Add", "ContactMessages", FormMethod.Post, new { @class = "row" }))
+{
+    <form action="" name="contact">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+            @*<input type="text" name="name" class="form-control" placeholder="Your name">*@
+            @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-envelope-o"></i></span>
+            @*<input type="email" name="email" class="form-control" placeholder="Email">*@
+            @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-fire"></i></span>
+            @*<input type="text" name="subject" class="form-control" placeholder="Subject">*@
+            @Html.TextBoxFor(x => x.Subject, new { @class = "form-control" })
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-comments"></i></span>
+            @*<textarea name="message" class="form-control large" placeholder="Massage"></textarea>*@
+            @Html.TextAreaFor(x => x.Text, new { @class = "form-control large" })
+        </div>
+        <button type="submit" class="btn btn-green"><i class="fa fa-envelope-o"></i>Send</button>
+    </form>
     <div class="col-sm-4 col-md-4 col-md-offset-2 wow fadeInRight animated" data-wow-delay="1.4s">
         <div class="address">
             <h2>Contact Info</h2>
@@ -40,12 +45,11 @@
             </ul>
         </div>
     </div>
-</div>
+}
+
 
 @section ValidationSection
     {
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
-    }
-
-<!--Contacts-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+}
