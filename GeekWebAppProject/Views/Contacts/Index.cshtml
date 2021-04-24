@@ -3,6 +3,7 @@
 @using (Html.BeginForm("Add", "ContactMessages", FormMethod.Post, new { @class = "row" }))
 {
     @Html.AntiForgeryToken()
+
     <form action="" name="contact">
         <div class="input-group">
             <span class="input-group-addon"><i class="fa fa-user"></i></span>
