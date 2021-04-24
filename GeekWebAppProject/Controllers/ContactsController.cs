@@ -26,9 +26,6 @@ namespace GeekWebAppProject.Controllers
         {
             if (ModelState.IsValid)
             {
-                ContactMessage contMess = _geekDbContext.ContactMessages.GetContactMessage(contactMessage);
-                if (contMess == null)
-                {
                     ContactMessage conMess = new ContactMessage
                     {
                         Email = contactMessage.Email,
@@ -39,10 +36,9 @@ namespace GeekWebAppProject.Controllers
                     };
                     _geekDbContext.ContactMessages.Add(conMess);
                     _geekDbContext.SaveChanges();
-                    return View();
-                }
+                    
             }
-            return View();
+            return View("Article", new { id = contactMessage.Id });
         }
     }
 }
