@@ -14,7 +14,7 @@
 
         protected override void Seed(Data.GeekDbContext context)
         {
-            
+              
         }
     }
 }
