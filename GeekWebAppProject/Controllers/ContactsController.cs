@@ -38,7 +38,7 @@ namespace GeekWebAppProject.Controllers
                     _geekDbContext.SaveChanges();
                     
             }
-            return View("Article", new { id = contactMessage.Id });
+            return View();
         }
     }
 }
