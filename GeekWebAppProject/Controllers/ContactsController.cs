@@ -9,36 +9,40 @@ namespace GeekWebAppProject.Controllers
 {
     public class ContactsController : Controller
     {
+
         private GeekDbContext _geekDbContext;
         public ContactsController()
         {
             _geekDbContext = new GeekDbContext();
         }
+
         // GET: Contacts
         [HttpGet]
         public ActionResult Index()
         {
             return View();
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Index(ContactMessage contactMessage)
+        public ActionResult Index(ContactMessage comment)
         {
             if (ModelState.IsValid)
             {
-                    ContactMessage conMess = new ContactMessage
-                    {
-                        Email = contactMessage.Email,
-                        Name = contactMessage.Name,
-                        Subject = contactMessage.Subject,
-                        Text = contactMessage.Text
-
-                    };
-                    _geekDbContext.ContactMessages.Add(conMess);
-                    _geekDbContext.SaveChanges();
-                    
+                ContactMessage c = new ContactMessage
+                {
+                    Email = comment.Email,
+                    Name = comment.Email,
+                    Text = comment.Text,
+                    Subject = comment.Subject
+                };
+                _geekDbContext.ContactMessages.Add(c);
+                _geekDbContext.SaveChanges();
             }
             return View();
         }
+
+      
+
     }
 }
