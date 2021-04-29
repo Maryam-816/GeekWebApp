@@ -161,6 +161,7 @@
     <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\ClientsController.cs" />
     <Compile Include="Controllers\ContactsController.cs" />
+    <Compile Include="Controllers\ContactsInfoController.cs" />
     <Compile Include="Controllers\FeedBackController.cs" />
     <Compile Include="Controllers\FooterController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -216,11 +217,12 @@
     <Content Include="Views\Clients\Index.cshtml" />
     <Content Include="Views\Portfolio\Index.cshtml" />
     <Content Include="Views\Blog\Index.cshtml" />
-    <Content Include="Views\Contacts\Index.cshtml" />
     <Content Include="Views\Menu\Index.cshtml" />
     <Content Include="Views\FeedBack\Index.cshtml" />
     <Content Include="Views\Skills\Index.cshtml" />
     <Content Include="Views\Footer\Index.cshtml" />
+    <Content Include="Views\ContactsInfo\Index.cshtml" />
+    <Content Include="Views\Contacts\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
