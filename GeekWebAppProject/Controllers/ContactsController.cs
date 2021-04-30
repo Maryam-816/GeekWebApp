@@ -32,17 +32,14 @@ namespace GeekWebAppProject.Controllers
                 ContactMessage c = new ContactMessage
                 {
                     Email = comment.Email,
-                    Name = comment.Email,
+                    Name = comment.Name,
                     Text = comment.Text,
                     Subject = comment.Subject
                 };
                 _geekDbContext.ContactMessages.Add(c);
-                _geekDbContext.SaveChanges();
             }
+
             return View();
         }
-
-      
-
     }
 }
