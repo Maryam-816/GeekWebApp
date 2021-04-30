@@ -26,7 +26,7 @@
 @using (Html.BeginForm("Index", "Contacts", FormMethod.Post, new { @class = "col-sm-6 col-md-6 wow fadeInLeft animated" }))
 {
     <h1 class="section-title wow fadeInLeft animated" data-wow-delay=".6s"><span>Hire</span><br>or Contact <br> Me</h1>
-
+    @Html.AntiForgeryToken()
     <form action="" name="contact">
         <div class="input-group">
             <span class="input-group-addon"><i class="fa fa-user"></i></span>
