@@ -168,8 +168,9 @@
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\PortfolioController.cs" />
     <Compile Include="Controllers\SkillsController.cs" />
+    <Compile Include="Data\ContactInfo.cs" />
     <Compile Include="Data\ContactMessage.cs" />
-    <Compile Include="Data\DbSetExtension.cs" />
+    <Compile Include="Infastracture\DbSetExtension.cs" />
     <Compile Include="Data\GeekDbContext.cs" />
     <Compile Include="Data\User.cs" />
     <Compile Include="Global.asax.cs">
@@ -182,6 +183,7 @@
     <Compile Include="Data\SkillsModel.cs" />
     <Compile Include="Data\ValuableClients.cs" />
     <Compile Include="Data\WorkModel.cs" />
+    <Compile Include="Infastracture\DbContextExtension.cs" />
     <Compile Include="Migrations\202104171325083_Initial.cs" />
     <Compile Include="Migrations\202104171325083_Initial.designer.cs">
       <DependentUpon>202104171325083_Initial.cs</DependentUpon>
@@ -197,6 +199,10 @@
     <Compile Include="Migrations\202104200955371_ContactsModelsRenamedToContactMessages.cs" />
     <Compile Include="Migrations\202104200955371_ContactsModelsRenamedToContactMessages.designer.cs">
       <DependentUpon>202104200955371_ContactsModelsRenamedToContactMessages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105011927433_ContactInfosAdded.cs" />
+    <Compile Include="Migrations\202105011927433_ContactInfosAdded.designer.cs">
+      <DependentUpon>202105011927433_ContactInfosAdded.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -223,6 +229,7 @@
     <Content Include="Views\Footer\Index.cshtml" />
     <Content Include="Views\ContactsInfo\Index.cshtml" />
     <Content Include="Views\Contacts\Index.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -245,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104200955371_ContactsModelsRenamedToContactMessages.resx">
       <DependentUpon>202104200955371_ContactsModelsRenamedToContactMessages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105011927433_ContactInfosAdded.resx">
+      <DependentUpon>202105011927433_ContactInfosAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
