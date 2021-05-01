@@ -22,5 +22,6 @@ namespace GeekWebAppProject.Data
         public DbSet<WorkModel> WorkModels { get; set; }
         public DbSet<ContactMessage> ContactMessages { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<ContactInfo> ContactInfos { get; set; }
     }
 }
