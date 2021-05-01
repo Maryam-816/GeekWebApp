@@ -1,4 +1,5 @@
 ﻿using GeekWebAppProject.Data;
+using GeekWebAppProject.Infastracture;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,20 +10,22 @@ namespace GeekWebAppProject.Controllers
 {
     public class MenuController : Controller
     {
-        //private readonly GeekDbContext _geekDbContext;
+        private readonly GeekDbContext _geekDbContext;
+        private int _ItemPerPage;
 
-        //public MenuController()
-        //{
-        //    _geekDbContext = new GeekDbContext();
-        //}
+        public MenuController()
+        {
+            _geekDbContext = new GeekDbContext();
+            _ItemPerPage = 5;
+        }
         //public ActionResult Index()
         //{
         //    var menus = _geekDbContext.Menus;
         //    return View(menus);
         //}
-        public ActionResult Index()
+        public ActionResult Index(int page = 1)
         {
-            return View();
+            return View(_geekDbContext.GetMenuData(page, _ItemPerPage));
         }
     }
 }

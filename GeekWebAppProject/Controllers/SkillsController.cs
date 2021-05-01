@@ -1,4 +1,6 @@
-﻿using System;
+﻿using GeekWebAppProject.Data;
+using GeekWebAppProject.Infastracture;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +10,18 @@ namespace GeekWebAppProject.Controllers
 {
     public class SkillsController : Controller
     {
-        // GET: Skills
-        public ActionResult Index()
+        private readonly GeekDbContext _geekDbContext;
+        private int _ItemPerPage;
+
+        public SkillsController()
         {
-            return View();
+            _geekDbContext = new GeekDbContext();
+            _ItemPerPage = 5;
+        }
+        // GET: Skills
+        public ActionResult Index(int page = 3)
+        {
+            return View(_geekDbContext.GetSkillsModelData(page, _ItemPerPage));
         }
     }
 }
